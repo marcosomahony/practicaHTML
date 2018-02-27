@@ -4,7 +4,23 @@
     margin: 2rem auto;
 }
 
-footer {
+.arriba{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.abajo{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+article figure.fig1 {
+    width: 30%;
+    float: right;
+    margin-top: 0%;
+}
+
+footer{
     border-top: 1px solid black;
     font-style: italic;
 }
@@ -15,6 +31,7 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+
     grid-template-columns: 12.5% 1fr 1fr 1fr 1fr 1fr 12.5%;
     display: grid;
     margin: 0px;
@@ -23,7 +40,7 @@ nav ul {
     text-align: center;
 }
 
-nav ul::before, nav ul::after {
+nav ul::before, nav ul::after{
     display: block;
     content: "";
 }
@@ -60,3 +77,9 @@ div.persona div.foto img {
 div.persona div.foto {
     float: left;
 }
+h1 img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
