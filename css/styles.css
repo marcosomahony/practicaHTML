@@ -1,14 +1,11 @@
 @import "../../node_modules/normalize.css/normalize.css";
-<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css?family=Coustard:900|Raleway');
 
 :root{
     --color_title: rgb(82, 82, 82);
     --color_content: rgb(226, 226, 226);
     --color_title_text: rgb(241, 253, 252);
 }
-=======
-@import url('https://fonts.googleapis.com/css?family=Coustard:900|Raleway');
->>>>>>> a5ba1569f9d1e81f1c5e355b731836472e086fcc
 
 .wrapper {
     width: 60%;
