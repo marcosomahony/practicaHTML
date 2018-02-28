@@ -18,17 +18,23 @@ article figure{
 }
 
 article figure.fig1 {
-    width: 30%;
+    width: 35%;
     float: right;
     margin-top: 0%;
 }
 
 article figure.fig2 {
-    width: 30%;
+    width: 40%;
     float: left;
     margin-top: 0%;
     margin-left: 0rem;
 }
+
+figure img{
+    width: 100%;
+}
+
+/*header*/
 
 header{
     text-align: center;
@@ -51,11 +57,16 @@ header p{
 article p{
     margin-right: 1rem;
     font-family: 'Raleway', sans-serif;
+    text-align: justify;
 }
 
 article h2, article h3{
     font-family: 'Raleway', serif;
     font-weight: 800;
+}
+
+p span{
+    font-weight: 600;
 }
 
 /*Aside*/
@@ -66,8 +77,9 @@ aside{
     font-family: 'Raleway', serif;
     padding: 0rem 1rem;
     float: right;
-    width: 45%;
+    width: 25%;
     font-size: 0.9rem;
+    margin: 0.5rem;
 }
 
 /*Footer*/
@@ -78,6 +90,10 @@ footer{
 }
 
 /*Navbar*/
+
+nav{
+    overflow: auto;
+}
 
 nav ul {
     list-style-type: none;
@@ -140,6 +156,47 @@ div.persona div.foto {
 h1 img{
     width: 1.5rem;
     height: 1.5rem;
+}
+
+@media screen and (max-width: 1024px){
+    .wrapper{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:768px){ /*tablet*/
+    .wrapper {
+        width: 90%;
+    }
+
+    aside{
+        padding: 0rem;
+        float: none;
+        width: 100%;
+        margin: 1rem 0rem;
+        padding: 1rem 0rem;
+    }
+
+    aside p, aside h2{
+        margin: 0rem 1rem;
+    }
+    
+    article p{
+        width: 100%;
+    }
+
+    article figure.fig1, article figure.fig2{
+        width: 100%;
+        display: block;
+        margin: 0rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:480px){ /*movil*/
+    .wrapper {
+        width: 95%;
+    }
 }
 
 
