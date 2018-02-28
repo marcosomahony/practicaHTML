@@ -67,16 +67,20 @@ div.persona {
     padding: 0.01em 16px;
     border-radius: 16px;
     overflow: hidden;
+    padding: .6rem;
+    margin: 1rem 0 0;
+    box-sizing: border-box;
 }
 
-div.persona div.foto img {
+div.foto {
+    float: left;
+}
+
+div.foto img {
     height: 182px;
     width: 182px;
 }
 
-div.persona div.foto {
-    float: left;
-}
 h1 img{
     width: 1.5rem;
     height: 1.5rem;
