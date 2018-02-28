@@ -25,14 +25,14 @@ export class Main {
                 for (var i = 0; i < inputs.length; i++) {
                     this.oDatos[inputs[i].name] = inputs[i].value;
                 }
-                this.oDatos.Sugerencias = document.getElementById("sugerencias").value;
+                this.oDatos.Sugerencias = document.getElementById("Sugerencias").value;
             },
             validarFormulario: function () {
-                let nombre = document.getElementById("nombre").value
-                let email = document.getElementById("email").value
+                let nombre = document.getElementById("Nombre").value
+                let email = document.getElementById("Email").value
 
                 if (nombre == null || nombre == "") {
-                    alert("Inserte el nombre")
+                    alert("Inserte el nombre")          /*como no es sum¡bmit no podemos usar las alertas nativas del navegador*/
                     return false
                 } 
                 if (email == null || email == "") {
@@ -46,10 +46,16 @@ export class Main {
                 if (this.validarFormulario()) {
                     this.escribirDatos()
                 }
-            }
-        };
+            },
 
-        document.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)
+
+        };
+        /*document.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)*/
+        
+        document.addEventListener("click", function menuReplegable(){
+            let opcionesRep = document.querySelector("#opRep").classList.toggle("opcionesRep")
+        });
+
     }
 
 }

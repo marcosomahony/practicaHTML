@@ -168,6 +168,10 @@ footer{
         padding: 0.5rem 0rem;
     }
 
+    .replegado .opcionesRep{
+        display: none;
+    }
+
     li img {                    /*imagen barras*/
         width: 25px;
         height: 25px;
