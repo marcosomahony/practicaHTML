@@ -86,4 +86,6 @@ h1 img{
     height: 1.5rem;
 }
 
-
+.oculto{
+    display: none;
+}
