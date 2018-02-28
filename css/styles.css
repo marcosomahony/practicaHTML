@@ -1,12 +1,6 @@
 @import "../../node_modules/normalize.css/normalize.css";
 @import url('https://fonts.googleapis.com/css?family=Coustard:900|Raleway');
 
-:root{
-    --color_title: rgb(82, 82, 82);
-    --color_content: rgb(226, 226, 226);
-    --color_title_text: rgb(241, 253, 252);
-}
-
 .wrapper {
     width: 60%;
     margin: 2rem auto;
@@ -175,78 +169,33 @@ footer{
 
 /*Imagenes*/
 
-div.autores {
-    display: flex;
-    justify-content: space-between;
-}
-
 div.persona {
-    width: 15rem;
-    display: inline-block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.01em 16px;
+    border-radius: 16px;
     overflow: hidden;
+    padding: .6rem;
+    margin: 1rem 0 0;
     box-sizing: border-box;
-    margin: 1rem 2rem 0;
-}
-
-div.nombre {
-    margin: auto;
-    box-sizing: border-box;
-    font-size: 1.45rem;
-    width: 100%;
-    padding: .3rem;
-    background-color: var(--color_title);
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    color: var(--color_title_text);
-    text-align: center;
-}
-
-div.role {
-    margin: auto;
-    box-sizing: border-box;
-    font-size: 1.25rem;
-    width: 100%;
-    padding: .2rem;
-    background-color: var(--color_title);
-    color: var(--color_title_text);
-    margin: 0 0 .35rem;
-    text-align: center;
 }
 
 div.foto {
-    margin: 0.5rem auto;
-    text-align: center;
-    background-color: var(--color_content);
-    line-height: 0;
-    height: 11.5rem;
-    width:11.5rem;
-    border-radius: 100%;
-    overflow: hidden;
+    float: left;
 }
 
 div.foto img {
-    position: relative;
-    top: -10%;
-    width: 100%;
+    height: 182px;
+    width: 182px;
 }
 
-div.datos{
-    float: left;
-    padding: .6rem;
-    font-size: .95rem;
-    width: 100%;
-    display: inline-block;
-    margin: auto;
-    box-sizing: border-box;
-    background-color: var(--color_content);
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-}
-
+<<<<<<< HEAD
 div.persona div.foto {
     float: left;
 }
 
+=======
+>>>>>>> 2f3acdbb7169eb36a9c4111313dcba9071553214
 h1 img{
     width: 1.5rem;
     height: 1.5rem;
