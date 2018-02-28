@@ -1,4 +1,6 @@
 @import "../../node_modules/normalize.css/normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Coustard:900|Raleway');
+
 .wrapper {
     width: 60%;
     margin: 2rem auto;
@@ -9,9 +11,10 @@
     grid-template-columns: 70% 30%;
 }
 
-.abajo{
-    display: grid;
-    grid-template-columns: 30% 70%;
+/*Figuras*/
+
+article figure{
+    margin: auto 1rem;
 }
 
 article figure.fig1 {
@@ -20,17 +23,69 @@ article figure.fig1 {
     margin-top: 0%;
 }
 
+article figure.fig2 {
+    width: 30%;
+    float: left;
+    margin-top: 0%;
+    margin-left: 0rem;
+}
+
+header{
+    text-align: center;
+    width: 100%;
+}
+
+header h1{
+    font-family: 'Coustard', serif;
+    margin-bottom: 0rem;
+}
+
+header p{
+    font-family: 'Raleway', serif;
+    font-weight: 800;
+    margin-top: 0.5rem;
+}
+
+/*Articulos*/
+
+article p{
+    margin-right: 1rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+article h2, article h3{
+    font-family: 'Raleway', serif;
+    font-weight: 800;
+}
+
+/*Aside*/
+
+aside{
+    background-color: #E3F8FF;
+    font-style: italic;
+    font-family: 'Raleway', serif;
+    padding: 0rem 1rem;
+    float: right;
+    width: 45%;
+    font-size: 0.9rem;
+}
+
+/*Footer*/
+
 footer{
     border-top: 1px solid black;
     font-style: italic;
 }
+
+/*Navbar*/
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #888;
+    border-radius: 4px;
 
     grid-template-columns: 12.5% 1fr 1fr 1fr 1fr 1fr 12.5%;
     display: grid;
@@ -38,6 +93,7 @@ nav ul {
     padding: 0px;
     list-style: none;
     text-align: center;
+    font-family: 'Raleway', serif;
 }
 
 nav ul::before, nav ul::after{
@@ -58,8 +114,11 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: #111;
+    background-color: #777;
+    border-radius: 4px;
 }
+
+/*Imagenes*/
 
 div.persona {
     width: 100%;
@@ -77,6 +136,7 @@ div.persona div.foto img {
 div.persona div.foto {
     float: left;
 }
+
 h1 img{
     width: 1.5rem;
     height: 1.5rem;
