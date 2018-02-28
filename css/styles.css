@@ -249,12 +249,18 @@ h1 img{
 }
 
 @media screen and (max-width: 1024px){
+
+    /*HOME*/
     .wrapper{
         width: 80%;
     }
+
+    /*ABOUT*/
 }
 
 @media screen and (max-width:768px){ /*tablet*/
+
+    /*HOME*/
     .wrapper {
         width: 90%;
     }
@@ -285,9 +291,13 @@ h1 img{
     nav ul {
         grid-template-columns: 5% 1fr 1fr 1fr 1fr 1fr 5%;
     }
+
+    /*ABOUT*/
 }
 
 @media screen and (max-width:480px){ /*movil*/
+
+    /*HOME*/
     .wrapper {
         width: 95%;
     }
@@ -300,6 +310,8 @@ h1 img{
     .replegado{
         display: block;
     }
+
+    /*ABOUT*/
 }
 
 
