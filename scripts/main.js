@@ -32,7 +32,7 @@ export class Main {
                 let email = document.getElementById("email").value
 
                 if (nombre == null || nombre == "") {
-                    alert("Inserte el nombre")
+                    alert("Inserte el nombre")          /*como no es sum¡bmit no podemos usar las alertas nativas del navegador*/
                     return false
                 } 
                 if (email == null || email == "") {
@@ -46,10 +46,16 @@ export class Main {
                 if (this.validarFormulario()) {
                     this.escribirDatos()
                 }
-            }
-        };
+            },
 
-        document.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)
+
+        };
+        /*document.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)*/
+        
+        document.addEventListener("click", function menuReplegable(){
+            let opcionesRep = document.querySelector("#opRep").classList.toggle("opcionesRep")
+        });
+
     }
 
 }
