@@ -248,6 +248,10 @@ h1 img{
     height: 1.5rem;
 }
 
+.oculto{
+    display: none;
+}
+
 @media screen and (max-width: 1024px){
 
     /*HOME*/
@@ -313,5 +317,3 @@ h1 img{
 
     /*ABOUT*/
 }
-
-
