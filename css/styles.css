@@ -178,6 +178,7 @@ footer{
 div.autores {
     display: flex;
     justify-content: space-between;
+    font-family: 'Raleway', serif;
 }
 
 div.persona {
@@ -297,6 +298,14 @@ h1 img{
     }
 
     /*ABOUT*/
+        
+    div.autores{
+        display: inline-block;
+    }
+
+    div.persona{
+        width:100%
+    }
 }
 
 @media screen and (max-width:480px){ /*movil*/
@@ -316,4 +325,12 @@ h1 img{
     }
 
     /*ABOUT*/
+
+    div.autores{
+        display: inline-block;
+    }
+
+    div.persona{
+        width:100%
+    }
 }
