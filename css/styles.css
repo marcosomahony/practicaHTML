@@ -1,4 +1,4 @@
-@import "../../node_modules/normalize.css/normalize.css";
+@import "../node_modules/normalize.css/normalize.css";
 @import url('https://fonts.googleapis.com/css?family=Coustard:900|Raleway');
 
 :root{
@@ -219,8 +219,10 @@ div.foto {
     text-align: center;
     background-color: var(--color_content);
     line-height: 0;
-    height: 11.5rem;
-    width:11.5rem;
+    max-height: 11.5rem;
+    max-width:11.5rem;
+    width: auto;
+    height: auto;
     border-radius: 100%;
     overflow: hidden;
 }
@@ -232,7 +234,6 @@ div.foto img {
 }
 
 div.datos{
-    float: left;
     padding: .6rem;
     font-size: .95rem;
     width: 100%;
@@ -261,6 +262,15 @@ h1 img{
     }
 
     /*ABOUT*/
+
+    div.autores{
+        display: block;
+    }
+
+    div.persona{
+        width:100%;
+        margin: 0;
+    }
 }
 
 @media screen and (max-width:768px){ /*tablet*/
@@ -300,11 +310,12 @@ h1 img{
     /*ABOUT*/
         
     div.autores{
-        display: inline-block;
+        display: block;
     }
 
     div.persona{
-        width:100%
+        width:100%;
+        margin: 0;
     }
 }
 
@@ -327,10 +338,11 @@ h1 img{
     /*ABOUT*/
 
     div.autores{
-        display: inline-block;
+        display: block;
     }
 
     div.persona{
-        width:100%
+        width: 100%;
+        margin: 0;
     }
 }
