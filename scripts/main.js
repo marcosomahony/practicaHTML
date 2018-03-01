@@ -21,6 +21,7 @@ export class Main {
 
         this.vista.aImports.forEach( (elem) => {
             this.vista.oImports[elem.title] = elem.import;
+            console.log(elem);
         })
 
        this.cargarTemplate('home'); 
@@ -82,11 +83,20 @@ export class Main {
     menuItems(oEv){
         oEv.preventDefault();
         console.log(`Se ha pulsado: ${oEv.target.id}`);
-        this.cargarTemplate(oEv.target.id)
+        if (!this.vista.oImports[oEv.target.id]) {
+            // Si no existe template
+            this.vista.eMain.innerHTML = `
+            <article>
+                <h2>${oEv.target.id.toUpperCase()}</h2>
+            </article>`
+        } else {
+            this.cargarTemplate(oEv.target.id )
+        }
     }
 
      cargarTemplate (id) {
         // Se selecciona el import adecuado segun su nombre (title)
+        console.log(this.vista.oImports);
         const IMPORT = this.vista.oImports[id]
         console.log(IMPORT)
         // del import se selecciona el template que contiene
