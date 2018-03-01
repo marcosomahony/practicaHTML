@@ -146,37 +146,10 @@ footer{
 .replegado{
     display: none;
 }
-    .replegado ul{
-        list-style: none;
-        text-align: center;
-        font-family: 'Raleway', serif;
-    
-        margin: 0;
-        padding: 0;
-
-        justify-content: center;
-        overflow: hidden;
-    
-        background-color: #888;
-    }
-    .replegado .barras{
+    .replegado{
         text-align: left;
-        background-color:white;
         padding-left:1rem;
-    }
-
-    .replegado li a {
-        display: block;
-        padding: 1rem 2rem;
-        white-space: nowrap;
-        color: white;
-        text-decoration: none;
-        text-transform: capitalize;
-        padding: 0.5rem 0rem;
-    }
-
-    .replegado .opcionesRep{
-        display: none;
+        list-style: none;
     }
 
     li img {                    /*imagen barras*/
@@ -330,9 +303,12 @@ h1 img{
         width: 95%;
     }
 
-    nav{
+    .menu ul {
+        display: block;
+    }
+
+    .menu .esconder{
         display: none;
-        background-color: #159;
     }
 
     .replegado{
