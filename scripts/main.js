@@ -97,14 +97,14 @@ export class Main {
      cargarTemplate (id) {
         // Se selecciona el import adecuado segun su nombre (title)
         console.log(this.vista.oImports);
-        const IMPORT = this.vista.oImports[id]
-        console.log(IMPORT)
+        const IMPORT = this.vista.oImports[id];
+        console.log(IMPORT);
         // del import se selecciona el template que contiene
-        const ELEM = IMPORT.querySelector(`#${id}`)
-        console.log(`#${id}`)
-        console.log(ELEM)
+        const ELEM = IMPORT.querySelector(`#${id}`);
+        console.log(`Id del elemento : #${id}`);
+        console.log(ELEM);
         // el HTML del elemnto se añade en el punto adecuado
-        this.vista.eMain.innerHTML = ELEM.innerHTML
+        this.vista.eMain.innerHTML = ELEM.innerHTML;
     } 
 
 }
