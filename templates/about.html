@@ -79,7 +79,7 @@
                     <label for="terminos">Definitivamente he leido los terminos de privacidad con detenimiento.</label>
                 </P>
                 <p>
-                    <input id="submit" type="button" value="Aceptar">
+                    <input id="submit" type="button" value="Aceptar" onclick="recogerDatos()">
                     <input id="reset" type="reset" value="Borrar">
                 </p>
             </fieldset>
@@ -92,49 +92,51 @@
 </template>
 
 <script type="text/javascript">
-    console.log("FORMECITO FORMECITO XDJXUHDASHCDJACHASDJCASD")
+    console.log("Script about.html ejecutado")
+    
     this.formContacto = {
-        oDatos: {},
-        oParrafo: document.getElementById("parrafo_resultado"),
+        oDatos: {}
+    }
 
-        escribirDatos: function () {
-            document.getElementById("form_contacto").classList.toggle("oculto")
-            document.getElementById("resultado_sugerencia").classList.toggle("oculto")
+    function escribirDatos() {
+        document.getElementById("form_contacto").classList.toggle("oculto")
+        document.getElementById("resultado_sugerencia").classList.toggle("oculto")
+        let output = document.getElementById("parrafo_resultado")
 
-            for (var i in this.oDatos) {
-                localStorage.setItem(i.toString(), this.oDatos[i])
-                this.oParrafo.innerHTML += "<li>" + i + ": <strong>" +
-                    this.oDatos[i] + "</strong></li>";
-            };
-        },
-        getTextos: function () {
-            var inputs = document.querySelectorAll("input[type='text']")
-            for (var i = 0; i < inputs.length; i++) {
-                this.oDatos[inputs[i].name] = inputs[i].value;
-            }
-            this.oDatos.Sugerencias = document.getElementById("Sugerencias").value;
-        },
-        validarFormulario: function () {
-            let nombre = document.getElementById("Nombre").value
-            let email = document.getElementById("Email").value
+        for (var i in this.formContacto.oDatos) {
+            localStorage.setItem(i.toString(), this.formContacto.oDatos[i])
+            output.innerHTML += "<li>" + i + ": <strong>" +
+                this.formContacto.oDatos[i] + "</strong></li>";
+        };
+    }
 
-            if (nombre == "") {
-                alert("Inserte el nombre")          /*como no es sum¡bmit no podemos usar las alertas nativas del navegador*/
-                return false
-            }
-            if (email == "") {
-                alert("Inserte el email")
-                return false
-            }
-            return true
-        },
-        recogerDatos: function () {
-            this.getTextos();
-            if (this.validarFormulario()) {
-                this.escribirDatos()
-            }
-        },
-    };
+    function getTextos() {
+        var inputs = document.querySelectorAll("input[type='text']")
+        for (var i = 0; i < inputs.length; i++) {
+            this.formContacto.oDatos[inputs[i].name] = inputs[i].value;
+        }
+        this.formContacto.oDatos.Sugerencias = document.getElementById("sugerencias").value;
+    }
 
-    document.currentScript.ownerDocument.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)
+    function validarFormulario() {
+        let nombre = document.getElementById("nombre").value
+        let email = document.getElementById("email").value
+
+        if (nombre == "") {
+            alert("Inserte el nombre")          /*como no es sum¡bmit no podemos usar las alertas nativas del navegador*/
+            return false
+        }
+        if (email == "") {
+            alert("Inserte el email")
+            return false
+        }
+        return true
+    }
+
+    function recogerDatos() {
+        this.getTextos();
+        if (this.validarFormulario()) {
+            this.escribirDatos()
+        }
+    }
 </script>

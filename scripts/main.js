@@ -17,11 +17,9 @@ export class Main {
         this.vista.aBtnsMenu.forEach((item) => {
             item.addEventListener('click', this.menuItems.bind(this), false);
         })
-        console.log(this.vista.aBtnsMenu);
 
         this.vista.aImports.forEach((elem) => {
             this.vista.oImports[elem.title] = elem.import;
-            console.log(elem);
         })
 
         this.cargarTemplate('home');
@@ -34,7 +32,6 @@ export class Main {
 
     menuItems(oEv) {
         oEv.preventDefault();
-        console.log(`Se ha pulsado: ${oEv.target.id}`);
         if (!this.vista.oImports[oEv.target.id]) {
             // Si no existe template
             this.vista.eMain.innerHTML = `
@@ -48,15 +45,9 @@ export class Main {
     }
 
     cargarTemplate(id) {
-        // Se selecciona el import adecuado segun su nombre (title)
-        console.log(this.vista.oImports);
         const IMPORT = this.vista.oImports[id];
-        console.log(IMPORT);
-        // del import se selecciona el template que contiene
         const ELEM = IMPORT.querySelector(`#${id}`);
-        console.log(`Id del elemento : #${id}`);
-        console.log(ELEM);
-        // el HTML del elemnto se añade en el punto adecuado
+        console.log(`Cargando template: #${id}`);
         this.highlightSelected(id)
         this.vista.eMain.innerHTML = ELEM.innerHTML;
     }
