@@ -34,7 +34,7 @@
                 <a>Alumno de la UPM. En el último año de Ingeniería de Software, actualmente en Babelcamp 2018.</a>
             </div>
         </div>
-        
+
         <!-- Persona 3 -->
 
         <div class="persona">
@@ -71,7 +71,7 @@
                     <textarea id="sugerencias" name="sugerencias" placeholder="Escriba sus sugerencias"></textarea>
                 </p>
                 <p>
-                    <input type="checkbox" id="newsletter" name="newsletter" required> 
+                    <input type="checkbox" id="newsletter" name="newsletter" required>
                     <label for="newsletter">Deseo recibir correos sobre pingüinos.</label>
                 </p>
                 <p>
@@ -90,3 +90,51 @@
         <ul id="parrafo_resultado"> </ul>
     </div>
 </template>
+
+<script type="text/javascript">
+    console.log("FORMECITO FORMECITO XDJXUHDASHCDJACHASDJCASD")
+    this.formContacto = {
+        oDatos: {},
+        oParrafo: document.getElementById("parrafo_resultado"),
+
+        escribirDatos: function () {
+            document.getElementById("form_contacto").classList.toggle("oculto")
+            document.getElementById("resultado_sugerencia").classList.toggle("oculto")
+
+            for (var i in this.oDatos) {
+                localStorage.setItem(i.toString(), this.oDatos[i])
+                this.oParrafo.innerHTML += "<li>" + i + ": <strong>" +
+                    this.oDatos[i] + "</strong></li>";
+            };
+        },
+        getTextos: function () {
+            var inputs = document.querySelectorAll("input[type='text']")
+            for (var i = 0; i < inputs.length; i++) {
+                this.oDatos[inputs[i].name] = inputs[i].value;
+            }
+            this.oDatos.Sugerencias = document.getElementById("Sugerencias").value;
+        },
+        validarFormulario: function () {
+            let nombre = document.getElementById("Nombre").value
+            let email = document.getElementById("Email").value
+
+            if (nombre == "") {
+                alert("Inserte el nombre")          /*como no es sum¡bmit no podemos usar las alertas nativas del navegador*/
+                return false
+            }
+            if (email == "") {
+                alert("Inserte el email")
+                return false
+            }
+            return true
+        },
+        recogerDatos: function () {
+            this.getTextos();
+            if (this.validarFormulario()) {
+                this.escribirDatos()
+            }
+        },
+    };
+
+    document.currentScript.ownerDocument.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)
+</script>
