@@ -94,28 +94,26 @@
 <script type="text/javascript">
     console.log("Script about.html ejecutado")
     
-    this.formContacto = {
-        oDatos: {}
-    }
+    this.oDatos = {}
 
     function escribirDatos() {
         document.getElementById("form_contacto").classList.toggle("oculto")
         document.getElementById("resultado_sugerencia").classList.toggle("oculto")
         let output = document.getElementById("parrafo_resultado")
 
-        for (var i in this.formContacto.oDatos) {
-            localStorage.setItem(i.toString(), this.formContacto.oDatos[i])
+        for (var i in this.oDatos) {
+            localStorage.setItem(i.toString(), this.oDatos[i])
             output.innerHTML += "<li>" + i + ": <strong>" +
-                this.formContacto.oDatos[i] + "</strong></li>";
+                this.oDatos[i] + "</strong></li>";
         };
     }
 
     function getTextos() {
         var inputs = document.querySelectorAll("input[type='text']")
         for (var i = 0; i < inputs.length; i++) {
-            this.formContacto.oDatos[inputs[i].name] = inputs[i].value;
+            this.oDatos[inputs[i].name] = inputs[i].value;
         }
-        this.formContacto.oDatos.Sugerencias = document.getElementById("sugerencias").value;
+        this.oDatos.Sugerencias = document.getElementById("sugerencias").value;
     }
 
     function validarFormulario() {
