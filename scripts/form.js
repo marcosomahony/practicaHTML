@@ -1,6 +1,7 @@
 export class FormContacto {
     constructor() {
-
+        
+        console.log("FORMECITO FORMECITO XDJXUHDASHCDJACHASDJCASD")
         this.formContacto = {
             oDatos: {},
             oParrafo: document.getElementById("parrafo_resultado"),

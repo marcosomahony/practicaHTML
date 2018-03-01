@@ -27,7 +27,7 @@ export class Main {
         this.cargarTemplate('home');
 
         /*FORMULARIO */
-        this.formContacto = {
+/*         this.formContacto = {
             oDatos: {},
             oParrafo: document.getElementById("parrafo_resultado"),
 
@@ -53,7 +53,7 @@ export class Main {
                 let email = document.getElementById("Email").value
 
                 if (nombre == null || nombre == "") {
-                    alert("Inserte el nombre")          /*como no es sum¡bmit no podemos usar las alertas nativas del navegador*/
+                    alert("Inserte el nombre")          
                     return false
                 }
                 if (email == null || email == "") {
@@ -68,16 +68,13 @@ export class Main {
                     this.escribirDatos()
                 }
             },
-
-
-        };
-        /*document.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)*/
-
+        }; */
+/*         document.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)
+ */
         /*MENU REPLEGABLE */
         document.addEventListener("click", function menuReplegable(){
             let opcionesRep = document.querySelector("#opRep").classList.toggle("esconder")
         });
-
     }
 
     menuItems(oEv) {
@@ -107,6 +104,11 @@ export class Main {
         // el HTML del elemnto se añade en el punto adecuado
         this.highlightSelected(id)
         this.vista.eMain.innerHTML = ELEM.innerHTML;
+
+        if(id=='about'){
+            console.log("Jejeejejfrewafeafsdafsdfsdafdasfdfdas");
+            () => new FormContacto();
+        }
     }
 
     highlightSelected(id) {
