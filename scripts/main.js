@@ -87,7 +87,8 @@ export class Main {
             // Si no existe template
             this.vista.eMain.innerHTML = `
             <article>
-                <h2>${oEv.target.id.toUpperCase()}</h2>
+                <h2>404 Not Found</h2>
+                <p>No hemos encontrado lo que estabas buscando</p>
             </article>`
         } else {
             this.cargarTemplate(oEv.target.id)
