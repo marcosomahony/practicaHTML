@@ -6,6 +6,26 @@ export class Main {
     constructor() {
         console.log("Cargación adecuada");
 
+        /*IMPORTS Y TEMPLATES*/
+        this.vista = {
+            aBtnsMenu = document.querySelectorAll('a');                 //botones
+            eMain : document.querySelector('main'),                     //seccion main
+            aImports: document.querySelectorAll('link[rel="import"]'),  //array de imports
+            oImports: {}                                                //imports
+        }
+
+        this.vista.aBtnsMenu.forEach( (item) =>{
+            item.addEventListener('click', this.menuItems.bind(this), false);
+        })
+        console.log(this.vista.aBtnsMenu);
+
+        this.vista.aImports.forEach( (elem) => {
+            this.vista.oImports[elem.title] = elem.import;
+        })
+
+        this.cargarTemplate('inicio');
+
+        /*FORMULARIO */
         this.formContacto = {
             oDatos: {},
             oParrafo: document.getElementById("parrafo_resultado"),
@@ -52,6 +72,7 @@ export class Main {
         };
         /*document.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)*/
         
+        /*MENU REPLEGABLE */
         document.addEventListener("click", function menuReplegable(){
             let opcionesRep = document.querySelector("#opRep").classList.toggle("opcionesRep")
         });
