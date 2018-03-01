@@ -7,6 +7,12 @@
     --color_title_text: rgb(241, 253, 252);
 }
 
+body {
+    background: no-repeat center center fixed;
+    background-image: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url("../assets/bg.png");
+    background-size: cover;
+}
+
 .wrapper {
     width: 60%;
     margin: 2rem auto;
@@ -135,33 +141,11 @@ footer {
 .replegado {
     display: none;
 }
-
-.replegado ul {
-    list-style: none;
-    text-align: center;
-    font-family: 'Raleway', serif;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #888;
-}
-
-.replegado .barras {
-    text-align: left;
-    background-color: white;
-    padding-left: 1rem;
-}
-
-.replegado li a {
-    display: block;
-    padding: 1rem 2rem;
-    white-space: nowrap;
-    color: white;
-    text-decoration: none;
-    text-transform: capitalize;
-    padding: 0.5rem 0rem;
-}
+    .replegado{
+        text-align: left;
+        padding-left:1rem;
+        list-style: none;
+    }
 
 .replegado .opcionesRep {
     display: none;
@@ -360,9 +344,13 @@ h1 img {
     .wrapper {
         width: 95%;
     }
-    nav {
+
+    .menu ul {
+        display: block;
+    }
+
+    .menu .esconder{
         display: none;
-        background-color: #159;
     }
     .replegado {
         display: block;
