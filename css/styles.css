@@ -240,7 +240,9 @@ div.datos {
 
 /*Formulario*/
 
-fieldset {
+
+
+ fieldset {
     font-family: 'Raleway', serif;
     font-weight: bold;
     border: 1px solid gray;
@@ -250,20 +252,22 @@ fieldset {
     margin-bottom: 1rem;
 }
 
+
 fieldset legend {
-    font-size: larger;
+    font-size: 1.25rem;
 }
 
-fieldset label {
+/*  fieldset label {
     padding: 12px 12px 12px 0;
     float: left;
-    clear: left;
     width: 100px;
     text-align: right;
-}
+} */
 
 fieldset input[type=text], select, textarea {
-    width: 60%;
+    margin-top: 0.5rem;
+    display: block;
+    width: 90%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -282,9 +286,9 @@ fieldset input[type=submit], [type=button], [type=reset] {
     margin-right: 3px;
     font-family: inherit;
 }
-
+ 
 /* Estilo al hoverear sobre botones */
-fieldset input[type=submit]:hover, [type=button]:hover {
+fieldset input[type=submit]:hover, [type=button]:hover, [type=reset]:hover {
     background-color: #888;
 }
 
