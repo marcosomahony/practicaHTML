@@ -72,11 +72,11 @@
                 </p>
                 <p>
                     <input type="checkbox" id="newsletter" name="newsletter" required>
-                    <label for="newsletter">Deseo recibir correos sobre pingüinos.</label>
+                    <label for="newsletter">Deseo recibir correos sobre pingüinos</label>
                 </p>
                 <p>
                     <input type="checkbox" id="terminos" name="terminos">
-                    <label for="terminos">Definitivamente he leido los terminos de privacidad con detenimiento.</label>
+                    <label for="terminos">Definitivamente he leído con detenimiento y acepto los términos de privacidad</label>
                 </P>
                 <p>
                     <input id="submit" type="button" value="Aceptar" onclick="recogerDatos()">
@@ -93,7 +93,7 @@
 
 <script type="text/javascript">
     console.log("Script about.html ejecutado")
-    
+
     this.oDatos = {}
 
     function escribirDatos() {
@@ -102,8 +102,10 @@
         let output = document.getElementById("parrafo_resultado")
 
         for (var i in this.oDatos) {
-            localStorage.setItem(i.toString(), this.oDatos[i])
-            output.innerHTML += "<li>" + i + ": <strong>" +
+            // guardar nombre del item con primera letra mayuscula
+            let nombreItem = i.charAt(0).toUpperCase() + i.slice(1);
+            localStorage.setItem(nombreItem, this.oDatos[i])
+            output.innerHTML += "<li>" + nombreItem + ": <strong>" +
                 this.oDatos[i] + "</strong></li>";
         };
     }
@@ -116,12 +118,21 @@
         this.oDatos.Sugerencias = document.getElementById("sugerencias").value;
     }
 
+    function getCheckboxes() {
+        this.oDatos["Suscripcion newsletter"] =
+            (document.getElementById("newsletter").checked) ?
+                "SI" : "NO";
+        this.oDatos["Acepta terminos"] =
+            (document.getElementById("terminos").checked) ?
+                "SI" : "NO";
+    }
+
     function validarFormulario() {
         let nombre = document.getElementById("nombre").value
         let email = document.getElementById("email").value
 
         if (nombre == "") {
-            alert("Inserte el nombre")          /*como no es sum¡bmit no podemos usar las alertas nativas del navegador*/
+            alert("Inserte el nombre")
             return false
         }
         if (email == "") {
@@ -133,6 +144,7 @@
 
     function recogerDatos() {
         this.getTextos();
+        this.getCheckboxes();
         if (this.validarFormulario()) {
             this.escribirDatos()
         }
