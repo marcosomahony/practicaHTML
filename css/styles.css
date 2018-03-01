@@ -255,7 +255,6 @@ fieldset legend {
 
 fieldset label {
     padding: 12px 12px 12px 0;
-    display: inline-block;
     float: left;
     clear: left;
     width: 100px;
