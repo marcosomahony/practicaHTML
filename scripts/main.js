@@ -14,17 +14,17 @@ export class Main {
             oImports: {}                                                //imports
         }
 
-        this.vista.aBtnsMenu.forEach( (item) =>{
+        this.vista.aBtnsMenu.forEach((item) => {
             item.addEventListener('click', this.menuItems.bind(this), false);
         })
         console.log(this.vista.aBtnsMenu);
 
-        this.vista.aImports.forEach( (elem) => {
+        this.vista.aImports.forEach((elem) => {
             this.vista.oImports[elem.title] = elem.import;
             console.log(elem);
         })
 
-       this.cargarTemplate('home'); 
+        this.cargarTemplate('home');
 
         /*FORMULARIO */
         this.formContacto = {
@@ -36,7 +36,7 @@ export class Main {
                 document.getElementById("resultado_sugerencia").classList.toggle("oculto")
 
                 for (var i in this.oDatos) {
-                    localStorage.setItem(i.toString(), this.oDatos[i])                    
+                    localStorage.setItem(i.toString(), this.oDatos[i])
                     this.oParrafo.innerHTML += "<li>" + i + ": <strong>" +
                         this.oDatos[i] + "</strong></li>";
                 };
@@ -55,11 +55,11 @@ export class Main {
                 if (nombre == null || nombre == "") {
                     alert("Inserte el nombre")          /*como no es sum¡bmit no podemos usar las alertas nativas del navegador*/
                     return false
-                } 
+                }
                 if (email == null || email == "") {
                     alert("Inserte el email")
                     return false
-                } 
+                }
                 return true
             },
             recogerDatos: function () {
@@ -72,7 +72,7 @@ export class Main {
 
         };
         /*document.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)*/
-        
+
         /*MENU REPLEGABLE */
         document.addEventListener("click", function menuReplegable(){
             let opcionesRep = document.querySelector("#opRep").classList.toggle("esconder")
@@ -80,7 +80,7 @@ export class Main {
 
     }
 
-    menuItems(oEv){
+    menuItems(oEv) {
         oEv.preventDefault();
         console.log(`Se ha pulsado: ${oEv.target.id}`);
         if (!this.vista.oImports[oEv.target.id]) {
@@ -90,11 +90,11 @@ export class Main {
                 <h2>${oEv.target.id.toUpperCase()}</h2>
             </article>`
         } else {
-            this.cargarTemplate(oEv.target.id )
+            this.cargarTemplate(oEv.target.id)
         }
     }
 
-     cargarTemplate (id) {
+    cargarTemplate(id) {
         // Se selecciona el import adecuado segun su nombre (title)
         console.log(this.vista.oImports);
         const IMPORT = this.vista.oImports[id];
@@ -104,7 +104,14 @@ export class Main {
         console.log(`Id del elemento : #${id}`);
         console.log(ELEM);
         // el HTML del elemnto se añade en el punto adecuado
+        this.highlightSelected(id)
         this.vista.eMain.innerHTML = ELEM.innerHTML;
-    } 
+    }
 
+    highlightSelected(id) {
+        this.vista.aBtnsMenu.forEach(element => {
+            element.classList.remove("active")
+        });
+        document.getElementById(id).classList.add("active")
+    }
 }

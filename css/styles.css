@@ -131,8 +131,14 @@ footer {
     text-transform: capitalize;
 }
 
-.menu li a:hover {
+.menu li a:hover:not(.active) {
     background-color: #777;
+    border-radius: 4px;
+}
+
+.menu li a.active {
+    background-color: rgb(68, 68, 68);
+    color: rgb(230, 230, 230);
     border-radius: 4px;
 }
 
@@ -301,7 +307,7 @@ h1 img {
         display: block;
         margin: 0;
     }
-    fpersona {
+    div.persona {
         max-width: 100%;
         width: 100%;
         margin: 0;
