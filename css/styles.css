@@ -183,14 +183,15 @@ div.autores {
     display: flex;
     justify-content: space-between;
     font-family: 'Raleway', serif;
+    margin: 0 3%;
 }
 
 div.persona {
-    width: 15rem;
+    max-width: 12.5rem;
     display: inline-block;
     overflow: hidden;
     box-sizing: border-box;
-    margin: 1rem 2rem 0;
+    margin: 1rem .1rem 1rem;
 }
 
 div.nombre {
@@ -235,6 +236,7 @@ div.foto img {
     position: relative;
     top: -10%;
     width: 100%;
+    height: 100%;
 }
 
 div.datos{
@@ -269,10 +271,12 @@ h1 img{
 
     div.autores{
         display: block;
+        margin: 0;
     }
 
     div.persona{
-        width:100%;
+        max-width: 100%;
+        width: 100%;
         margin: 0;
     }
 }
@@ -310,17 +314,6 @@ h1 img{
     nav ul {
         grid-template-columns: 5% 1fr 1fr 1fr 1fr 1fr 5%;
     }
-
-    /*ABOUT*/
-        
-    div.autores{
-        display: block;
-    }
-
-    div.persona{
-        width:100%;
-        margin: 0;
-    }
 }
 
 @media screen and (max-width:480px){ /*movil*/
@@ -337,16 +330,5 @@ h1 img{
 
     .replegado{
         display: block;
-    }
-
-    /*ABOUT*/
-
-    div.autores{
-        display: block;
-    }
-
-    div.persona{
-        width: 100%;
-        margin: 0;
     }
 }
