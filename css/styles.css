@@ -136,8 +136,14 @@ footer{
         text-transform: capitalize;
     }
 
-    .menu li a:hover {
+    .menu li a:hover:not(.active) {
         background-color: #777;
+        border-radius: 4px;
+    }
+
+    .menu li a.active {
+        background-color: rgb(176, 220, 228);
+        color: rgb(32, 32, 32);
         border-radius: 4px;
     }
 
