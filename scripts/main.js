@@ -8,8 +8,8 @@ export class Main {
 
         /*IMPORTS Y TEMPLATES*/
         this.vista = {
-            aBtnsMenu: document.querySelectorAll('a'),                 //botones
-            eMain: document.querySelector('main'),                     //seccion main
+            aBtnsMenu: document.querySelectorAll('nav ul a'),                 //botones
+            eMain : document.querySelector('main'),                     //seccion main
             aImports: document.querySelectorAll('link[rel="import"]'),  //array de imports
             oImports: {}                                                //imports
         }
@@ -74,8 +74,8 @@ export class Main {
         /*document.getElementById("submit").onclick = this.formContacto.recogerDatos.bind(this.formContacto)*/
 
         /*MENU REPLEGABLE */
-        document.addEventListener("click", function menuReplegable() {
-            let opcionesRep = document.querySelector("#opRep").classList.toggle("opcionesRep")
+        document.addEventListener("click", function menuReplegable(){
+            let opcionesRep = document.querySelector("#opRep").classList.toggle("esconder")
         });
 
     }
