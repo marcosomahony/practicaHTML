@@ -292,6 +292,7 @@ fieldset input[type=submit]:hover, [type=button]:hover, [type=reset]:hover {
     background-color: #888;
 }
 
+/*Imagen de pingunos en el titulo*/
 h1 img {
     width: 1.5rem;
     height: 1.5rem;
