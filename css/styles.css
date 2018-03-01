@@ -1,8 +1,7 @@
 @import "../node_modules/normalize.css/normalize.css";
 @import url('https://fonts.googleapis.com/css?family=Coustard:900|Raleway');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:900');
-
-:root{
+:root {
     --color_title: rgb(82, 82, 82);
     --color_content: rgb(226, 226, 226);
     --color_title_text: rgb(241, 253, 252);
@@ -13,14 +12,14 @@
     margin: 2rem auto;
 }
 
-.arriba{
+.arriba {
     display: grid;
     grid-template-columns: 70% 30%;
 }
 
 /*Figuras*/
 
-article figure{
+article figure {
     margin: auto 1rem;
 }
 
@@ -37,23 +36,23 @@ article figure.fig2 {
     margin-left: 0rem;
 }
 
-figure img{
+figure img {
     width: 100%;
 }
 
 /*header*/
 
-header{
+header {
     text-align: center;
     width: 100%;
 }
 
-header h1{
+header h1 {
     font-family: 'Work Sans', sans-serif;
     margin-bottom: 0rem;
 }
 
-header p{
+header p {
     font-family: 'Raleway', serif;
     font-weight: 800;
     margin-top: 0.5rem;
@@ -61,24 +60,24 @@ header p{
 
 /*Articulos*/
 
-article p{
+article p {
     margin-right: 1rem;
     font-family: 'Raleway', sans-serif;
     text-align: justify;
 }
 
-article h2, article h3{
+article h2, article h3 {
     font-family: 'Raleway', serif;
     font-weight: 800;
 }
 
-p span{
+p span {
     font-weight: 600;
 }
 
 /*Aside*/
 
-aside{
+aside {
     background-color: #E3F8FF;
     font-style: italic;
     font-family: 'Raleway', serif;
@@ -91,7 +90,7 @@ aside{
 
 /*Footer*/
 
-footer{
+footer {
     border-top: 1px solid black;
     font-style: italic;
 }
@@ -102,81 +101,77 @@ footer{
     list-style: none;
     text-align: center;
     font-family: 'Raleway', serif;
-
     margin: 0;
     padding: 0;
-
     justify-content: center;
     overflow: hidden;
-
     background-color: #888;
     border-radius: 4px;
-
     grid-template-columns: 12.5% 1fr 1fr 1fr 1fr 1fr 12.5%;
     display: grid;
 }
 
-    .menu ul::before, nav ul::after{
-        display: block;
-        content: "";
-    }
+.menu ul::before, nav ul::after {
+    display: block;
+    content: "";
+}
 
-    .menu li a {
-        display: block;
-        padding: 1rem 2rem;
-        white-space: nowrap;
-        color: white;
-        text-decoration: none;
-        text-transform: capitalize;
-    }
+.menu li a {
+    display: block;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
 
-    .menu li a:hover {
-        background-color: #777;
-        border-radius: 4px;
-    }
-
+.menu li a:hover {
+    background-color: #777;
+    border-radius: 4px;
+}
 
 /*navbar replegada*/
-.replegado{
+
+.replegado {
     display: none;
 }
-    .replegado ul{
-        list-style: none;
-        text-align: center;
-        font-family: 'Raleway', serif;
-    
-        margin: 0;
-        padding: 0;
 
-        justify-content: center;
-        overflow: hidden;
-    
-        background-color: #888;
-    }
-    .replegado .barras{
-        text-align: left;
-        background-color:white;
-        padding-left:1rem;
-    }
+.replegado ul {
+    list-style: none;
+    text-align: center;
+    font-family: 'Raleway', serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #888;
+}
 
-    .replegado li a {
-        display: block;
-        padding: 1rem 2rem;
-        white-space: nowrap;
-        color: white;
-        text-decoration: none;
-        text-transform: capitalize;
-        padding: 0.5rem 0rem;
-    }
+.replegado .barras {
+    text-align: left;
+    background-color: white;
+    padding-left: 1rem;
+}
 
-    .replegado .opcionesRep{
-        display: none;
-    }
+.replegado li a {
+    display: block;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0.5rem 0rem;
+}
 
-    li img {                    /*imagen barras*/
-        width: 25px;
-        height: 25px;
-    }
+.replegado .opcionesRep {
+    display: none;
+}
+
+li img {
+    /*imagen barras*/
+    width: 25px;
+    height: 25px;
+}
 
 /*Imagenes*/
 
@@ -226,7 +221,7 @@ div.foto {
     background-color: var(--color_content);
     line-height: 0;
     max-height: 11.5rem;
-    max-width:11.5rem;
+    max-width: 11.5rem;
     width: auto;
     height: auto;
     border-radius: 100%;
@@ -240,7 +235,7 @@ div.foto img {
     height: 100%;
 }
 
-div.datos{
+div.datos {
     padding: .6rem;
     font-size: .95rem;
     width: 100%;
@@ -252,84 +247,124 @@ div.datos{
     border-bottom-right-radius: 0.5rem;
 }
 
-h1 img{
+/*Formulario*/
+
+fieldset {
+    font-family: 'Raleway', serif;
+    font-weight: bold;
+    border: 1px solid gray;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+fieldset legend {
+    font-size: larger;
+}
+
+fieldset label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: right;
+}
+
+fieldset input[type=text], select, textarea {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+fieldset input[type=submit], [type=button], [type=reset] {
+    background-color:#777;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-right: 3px;
+    font-family: inherit;
+}
+
+/* Estilo al hoverear sobre botones */
+fieldset input[type=submit]:hover, [type=button]:hover {
+    background-color: #888;
+}
+
+h1 img {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.oculto{
+.oculto {
     display: none;
 }
 
-@media screen and (max-width: 1024px){
-
+@media screen and (max-width: 1024px) {
     /*HOME*/
-    .wrapper{
+    .wrapper {
         width: 80%;
     }
-
     /*ABOUT*/
-
-    div.autores{
+    div.autores {
         display: block;
         margin: 0;
     }
-
-    div.persona{
+    fpersona {
         max-width: 100%;
         width: 100%;
         margin: 0;
     }
 }
 
-@media screen and (max-width:768px){ /*tablet*/
-
+@media screen and (max-width:768px) {
+    /*tablet*/
     /*HOME*/
     .wrapper {
         width: 90%;
     }
-
-    aside{
+    aside {
         padding: 0rem;
         float: none;
         width: 100%;
         margin: 1rem 0rem;
         padding: 1rem 0rem;
     }
-
-    aside p, aside h2{
+    aside p, aside h2 {
         margin: 0rem 1rem;
     }
-    
-    article p{
+    article p {
         width: 100%;
     }
-
-    article figure.fig1, article figure.fig2{
+    article figure.fig1, article figure.fig2 {
         width: 100%;
         display: block;
         margin: 0rem;
         padding-bottom: 1rem;
     }
-
     nav ul {
         grid-template-columns: 5% 1fr 1fr 1fr 1fr 1fr 5%;
     }
 }
 
-@media screen and (max-width:480px){ /*movil*/
-
+@media screen and (max-width:480px) {
+    /*movil*/
     /*HOME*/
     .wrapper {
         width: 95%;
     }
-
-    nav{
+    nav {
         display: none;
         background-color: #159;
     }
-
-    .replegado{
+    .replegado {
         display: block;
     }
 }
