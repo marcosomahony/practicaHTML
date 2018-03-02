@@ -9,7 +9,7 @@ export class Main {
         /*IMPORTS Y TEMPLATES*/
         this.vista = {
             aBtnsMenu: document.querySelectorAll('nav ul a'),                 //botones
-            eMain : document.querySelector('main'),                     //seccion main
+            eMain: document.querySelector('main'),                     //seccion main
             aImports: document.querySelectorAll('link[rel="import"]'),  //array de imports
             oImports: {}                                                //imports
         }
@@ -25,7 +25,7 @@ export class Main {
         this.cargarTemplate('home');
 
         /*MENU REPLEGABLE */
-        document.addEventListener("click", function menuReplegable(){
+        document.addEventListener("click", function menuReplegable() {
             let opcionesRep = document.querySelector("#opRep").classList.toggle("esconder")
         });
     }
