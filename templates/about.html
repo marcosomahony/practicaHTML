@@ -62,10 +62,14 @@
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" size="30" placeholder="Escriba su nombre" required>
                 </p>
+                <div id="nombre-validate" class="validate oculto">
+                    <i class="fa fa-times-circle"></i> El nombre no puede estar vacío</div>
                 <p>
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email" size="30" maxlength="200" placeholder="Escriba su email" required>
                 </p>
+                <div id="email-validate" class="validate oculto">
+                    <i class="fa fa-times-circle"></i> El email no puede estar vacío</div>
                 <p>
                     <label class="top" for="sugerencias">Sugerencias:</label>
                     <textarea id="sugerencias" name="sugerencias" placeholder="Escriba sus sugerencias"></textarea>
@@ -78,9 +82,11 @@
                     <input type="checkbox" id="terminos" name="terminos">
                     <label for="terminos">Definitivamente he leído con detenimiento y acepto los términos de privacidad</label>
                 </P>
+                <div id="terminos-validate" class="validate oculto">
+                    <i class="fa fa-times-circle"></i> Debe aceptar los términos de privacidad</div>
                 <p>
                     <input id="submit" type="button" value="Aceptar" onclick="recogerDatos()">
-                    <input id="reset" type="reset" value="Borrar">
+                    <input id="reset" type="reset" value="Borrar" onclick="resetValidate()">
                 </p>
             </fieldset>
         </form>
@@ -132,16 +138,18 @@
         let email = document.getElementById("email").value
         let terminos = document.getElementById("terminos").checked
 
-        if (nombre == "") {
-            alert("Inserte el nombre")
-            return false
-        }
-        if (email == "") {
-            alert("Inserte el email")
-            return false
-        }
-        if (!terminos){
-            alert("Lea detenidamente y acepte los términos")
+        resetValidate()
+
+        if (nombre == "" || email == "" || !terminos) {
+            if (nombre == "") {
+                document.getElementById("nombre-validate").classList.remove("oculto")
+            }
+            if (email == "") {
+                document.getElementById("email-validate").classList.remove("oculto")
+            }
+            if (!terminos) {
+                document.getElementById("terminos-validate").classList.remove("oculto")
+            }
             return false
         }
 
@@ -154,5 +162,11 @@
         if (this.validarFormulario()) {
             this.escribirDatos()
         }
+    }
+
+    function resetValidate() {
+        document.getElementById("nombre-validate").classList.add("oculto")
+        document.getElementById("email-validate").classList.add("oculto")
+        document.getElementById("terminos-validate").classList.add("oculto")
     }
 </script>
