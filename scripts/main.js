@@ -1,8 +1,5 @@
 export class Main {
 
-    // obligatorio incluir nombre y correo
-    // mostrar datos al terminar
-
     constructor() {
         /*IMPORTS Y TEMPLATES*/
         this.vista = {
