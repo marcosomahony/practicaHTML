@@ -4,8 +4,6 @@ export class Main {
     // mostrar datos al terminar
 
     constructor() {
-        console.log("Cargación adecuada");
-
         /*IMPORTS Y TEMPLATES*/
         this.vista = {
             aBtnsMenu: document.querySelectorAll('nav ul a'),                 //botones
@@ -19,7 +17,7 @@ export class Main {
         })
 
         this.vista.aImports.forEach((elem) => {
-            this.vista.oImports[elem.title] = elem.import;
+            this.vista.oImports[elem.title] = F.import;
         })
 
         this.cargarTemplate('home');
@@ -47,7 +45,6 @@ export class Main {
     cargarTemplate(id) {
         const IMPORT = this.vista.oImports[id];
         const ELEM = IMPORT.querySelector(`#${id}`);
-        console.log(`Cargando template: #${id}`);
         this.highlightSelected(id)
         this.vista.eMain.innerHTML = ELEM.innerHTML;
     }
