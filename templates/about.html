@@ -130,6 +130,7 @@
     function validarFormulario() {
         let nombre = document.getElementById("nombre").value
         let email = document.getElementById("email").value
+        let terminos = document.getElementById("terminos").checked
 
         if (nombre == "") {
             alert("Inserte el nombre")
@@ -139,6 +140,11 @@
             alert("Inserte el email")
             return false
         }
+        if (!terminos){
+            alert("Lea detenidamente y acepte los términos")
+            return false
+        }
+
         return true
     }
 
