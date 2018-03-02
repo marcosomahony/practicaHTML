@@ -248,9 +248,6 @@ div.datos {
 }
 
 /*Formulario*/
-
-
-
  fieldset {
     font-family: 'Raleway', serif;
     font-weight: bold;
@@ -265,13 +262,6 @@ div.datos {
 fieldset legend {
     font-size: 1.25rem;
 }
-
-/*  fieldset label {
-    padding: 12px 12px 12px 0;
-    float: left;
-    width: 100px;
-    text-align: right;
-} */
 
 fieldset input[type=text], select, textarea {
     margin-top: 0.5rem;
@@ -304,6 +294,12 @@ fieldset input[type=submit]:hover, [type=button]:hover, [type=reset]:hover {
 fieldset div.validate {
     color: rgb(241, 55, 55);
     margin-left: 2rem;
+}
+
+/*Resultados formulario*/
+.salidaDatos {
+    width: 100%;
+    font-family: 'Raleway', serif;
 }
 
 /*Imagen de pingunos en el titulo*/
