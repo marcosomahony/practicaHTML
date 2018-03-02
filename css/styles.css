@@ -5,7 +5,7 @@
 
 :root {
     --color_title: rgb(82, 82, 82);
-    --color_content: rgb(247, 247, 247);
+    --color_content: rgb(240, 251, 255);
     --color_title_text: rgb(241, 253, 252);
 }
 
@@ -87,7 +87,7 @@ p span {
 /*Aside*/
 
 aside {
-    background-color: #E3F8FF;
+    background-color: var(--color_content);
     font-style: italic;
     font-family: 'Raleway', serif;
     padding: 0rem 1rem;
