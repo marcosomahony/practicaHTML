@@ -17,7 +17,7 @@ export class Main {
         })
 
         this.vista.aImports.forEach((elem) => {
-            this.vista.oImports[elem.title] = F.import;
+            this.vista.oImports[elem.title] = elem.import;
         })
 
         this.cargarTemplate('home');
